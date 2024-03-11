@@ -67,8 +67,18 @@ flutter:
     - assets/images/robot_welcome.png
     - assets/images/robot.png
     - assets/images/robot2.png
+    - assets/images/bad.png
+    - assets/images/cpp.png
+    - assets/images/java.png
+    - assets/images/linux.png
+    - assets/images/py.png
+    - assets/images/success.png
     - assets/icons/deisgn.svg
     - assets/images/logo.png
+    - assets/cpp.json
+    - assets/java.json
+    - assets/linux.json
+    - assets/python.json
 
 
 
