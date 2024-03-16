@@ -12,9 +12,9 @@ class ResultPage extends StatefulWidget {
 
 class _ResultPageState extends State<ResultPage> {
   List<String> images = [
-    "images/success.png",
-    "images/good.png",
-    "images/bad.png",
+    "assets/images/success.png",
+    "assets/images/good.png",
+    "assets/images/bad.png",
   ];
 
   late String message;
