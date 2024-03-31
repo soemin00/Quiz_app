@@ -3,13 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:login_page/pages/login_page.dart';
 
+class SignupPage extends StatefulWidget {
+  const SignupPage({Key? key}) : super(key: key);
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+  @override
+  _SignupPageState createState() => _SignupPageState();
+}
+
+class _SignupPageState extends State<SignupPage> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
+
+  final formKey= GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Container(
         height: double.maxFinite,
@@ -25,7 +34,7 @@ class SignupPage extends StatelessWidget {
             padding: EdgeInsets.all(15),
             child: Column(
               children: [
-                Image.asset('assets/images/robot2.png',height: 350,),
+                Image.asset('assets/images/robot2.png', height: 350,),
                 Text(
                   "Welcome to Quizziz!",
                   textAlign: TextAlign.center,
@@ -37,7 +46,14 @@ class SignupPage extends StatelessWidget {
                 ),
 
                 SizedBox(height: 10,),
-                TextField(
+                TextFormField(
+                  validator: (value){
+                    if (value!.isEmpty){
+                      return "Email is required";
+                    }
+                    return null;
+                  },
+                  controller: _emailController,
                   keyboardType: TextInputType.text,
                   style: const TextStyle(color: Color(0xff3C3C43)),
                   decoration: InputDecoration(
@@ -56,7 +72,14 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10,),
-                TextField(
+                TextFormField(
+                  validator: (value){
+                    if (value!.isEmpty){
+                      return "password is required";
+                    }
+                    return null;
+                  },
+                  controller: _passwordController,
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   style: const TextStyle(color: Color(0xff3C3C43)),
@@ -76,7 +99,17 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10,),
-                TextField(
+                TextFormField(
+                  controller: _confirmPasswordController,
+                  validator: (value){
+                    if (value!.isEmpty){
+                      return "password is required";
+                    }
+                    else if(_passwordController.text != _confirmPasswordController.text){
+                      return "Passwords don't Match";
+                    }
+                    return null;
+                  },
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   style: const TextStyle(color: Color(0xff3C3C43)),

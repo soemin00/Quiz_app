@@ -202,7 +202,7 @@ class _QuizPageState extends State<QuizPage> {
         await showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text("Quizstar"),
+            title: Text("Quizizz"),
             content: Text("You can't go back at this stage."),
             actions: <Widget>[
               ElevatedButton(
