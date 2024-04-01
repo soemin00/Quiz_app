@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/pages/Signup_page.dart';
+import 'package:login_page/pages/Splash.dart';
 import 'package:login_page/pages/login_page.dart';
 
 void main() {

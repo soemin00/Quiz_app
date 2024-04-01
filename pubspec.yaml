@@ -40,6 +40,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  intl: ^0.19.0
+  sqflite: ^2.3.2
+  path_provider: ^2.1.2
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -67,7 +71,19 @@ flutter:
     - assets/images/robot_welcome.png
     - assets/images/robot.png
     - assets/images/robot2.png
+    - assets/images/bad.png
+    - assets/images/cpp.png
+    - assets/images/java.png
+    - assets/images/linux.png
+    - assets/images/py.png
+    - assets/images/js.png
+    - assets/images/success.png
     - assets/icons/deisgn.svg
+    - assets/images/logo.png
+    - assets/cpp.json
+    - assets/java.json
+    - assets/linux.json
+    - assets/python.json
 
 
 
