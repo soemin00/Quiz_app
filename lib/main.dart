@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter UI Tutorial',
       theme: ThemeData(
           fontFamily: "SF-Pro-Text"),
-      home: const LoginPage(),
+      home: const SignupPage(),
     );
   }
 }
